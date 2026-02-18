@@ -5,7 +5,7 @@ import * as schema from "@/db/schema"; // your drizzle schema
 export const auth = betterAuth({
     emailAndPassword: {
     	enabled: true,
-    	autoSignIn: true //enable automatic sign-in after sign-up
+    	autoSignIn: false //defaults to true
   },
     database: drizzleAdapter(db, {
         provider: "pg", // or "mysql", "sqlite"
