@@ -4,7 +4,7 @@ import {Button} from "@/components/ui/button";
 import  {useState} from "react";
 import { Input } from "@base-ui/react";
 
-import { authClient } from "../lib/auth-client";
+import { authClient } from "../../lib/auth-client";
 
 export default function Home() {
 
