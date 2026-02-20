@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TRPCReactProvider } from "@/trpc/client";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -19,13 +20,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  return (<TRPCReactProvider>
     <html lang="en">
       <body
         className={`${inter.className} antialiased`}
       >
         {children}
       </body>
-    </html>
+    </html></TRPCReactProvider>
   );
 }
