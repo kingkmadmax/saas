@@ -395,6 +395,10 @@
     background-color: var(--background);
     color: var(--foreground);
   }
+
+  bottom:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
 
 @layer components;
@@ -1341,6 +1345,10 @@
 
   .cursor-default {
     cursor: default;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
   }
 
   .cursor-text {
@@ -5296,6 +5304,10 @@
 
   .\[\&_\[cmdk-item\]_svg\]\:w-5 [cmdk-item] svg {
     width: calc(var(--spacing) * 5);
+  }
+
+  .\[\&_\[data-slot\=command-input-wrapper\]\]\:h-12 [data-slot="command-input-wrapper"] {
+    height: calc(var(--spacing) * 12);
   }
 
   .\[\&_img\]\:size-full img {

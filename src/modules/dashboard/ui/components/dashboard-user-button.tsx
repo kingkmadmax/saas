@@ -112,28 +112,33 @@ export const DashboardUserButton = () => {
         </button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="end" className="w-72">
+      <DropdownMenuContent align="end" side="right" className="w-72">
         <DropdownMenuLabel>
           <div className="flex flex-col gap-1">
-            <span className="font-medium truncate">
-              {data.user.name}
-            </span>
-            <span className="text-sm text-muted-foreground truncate">
-              {data.user.email}
-            </span>
+            <span className="font-medium truncate">{data.user.name}</span>
+            <span className="text-sm font-normal text-muted-foreground truncate">{data.user.email}</span>
           </div>
         </DropdownMenuLabel>
 
         <DropdownMenuSeparator />
-
-        <DropdownMenuItem>
-          <CreditCardIcon className="size-4 mr-2" />
+            <DropdownMenuItem
+          onClick={() =>{}}
+          className="cursor-pointer flex items-center justify-between"
+        >
           Billing
+          <CreditCardIcon className="size-4" />
         </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={onLogout}
+          className="cursor-pointer flex items-center justify-between"
+        ></DropdownMenuItem>
 
-        <DropdownMenuItem onClick={onLogout}>
-          <LogOutIcon className="size-4 mr-2" />
+         <DropdownMenuItem
+          onClick={onLogout}
+          className="cursor-pointer flex items-center justify-between"
+        >
           Logout
+          <LogOutIcon className="size-4" />
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
