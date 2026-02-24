@@ -3,17 +3,18 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { useTRPC } from "@/trpc/client";
 import { LoadingState } from "@/components/loading-state";
 import { ErrorState } from "@/components/error-state";
-import { ResponsivDialog } from "@/components/response-dialog"
-import { Button } from "@/components/ui/button"
+
 import { DataTable } from "../componets/data-table";
 import { columns } from "../componets/columns";
 import { EmptyState } from "@/components/empty-state ";
 import { useAgentsFilters } from "../../hooks/use-agent-filters";
 import { DataPagination } from "@/modules/agents/ui/componets/data-pagnt";
+import { useRouter } from "next/navigation";
 
 
 
 export const AgentView = () => {
+    const router = useRouter();
     const [filters, setFilters] = useAgentsFilters();
 
     const trpc = useTRPC();
@@ -32,7 +33,7 @@ export const AgentView = () => {
             />
 
 
-            <DataTable columns={columns} data={data.items} />
+            <DataTable columns={columns} data={data.items} onRowClick={(row) => router.push(`/agents/${row.id}`)} />
             {data.items.length === 0 && (
                 <EmptyState
                     title="Create your first agent"
