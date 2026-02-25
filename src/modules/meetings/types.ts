@@ -1,5 +1,6 @@
 import { inferRouterOutputs } from "@trpc/server";
 
-import { AppRouter } from "@/trpc/routers/_apps"
+import type { AppRouter } from "@/trpc/routers/_apps"
 
-export  type MeetingGetOne=inferRouterOutputs<AppRouter>["meetings"]["getOne"]
+export type MeetingGetMany = inferRouterOutputs<AppRouter>["meetings"]["getMany"]["items"];
+export type MeetingGetOne = inferRouterOutputs<AppRouter>["meetings"]["getOne"];
