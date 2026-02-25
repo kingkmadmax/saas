@@ -6,26 +6,28 @@ import { useSuspenseQuery } from "@tanstack/react-query"
 import { LoadingState } from "@/components/loading-state";
 import { ErrorState } from "@/components/error-state";
 
- export const  MeetingsView=()=>{
+
+export const MeetingsView = () => {
     const trpc = useTRPC();
-    const {data}=useSuspenseQuery(trpc.meetings.getMany.queryOptions({}))
- 
- return(
-    <div>
-        {JSON.stringify(data)}
-    </div>
- )
+    const { data } = useSuspenseQuery(trpc.meetings.getMany.queryOptions({}))
+
+    return (
+        <div>
+           tOdolist
+
+        </div>
+    )
 }
 export const MeetingsViewLoading = () => {
     return (
         <LoadingState
-            title="Loading meetings"
-            description="this may  take  a  few  seconds" />
+            title="Loading Meetings..."
+            description="This may take a few seconds." />
     )
 }
 export const MeetingsViewError = () => {
     return (<ErrorState
-        title="Error Loading meetings"
-        description="SOmthing is wrong whit  you devise"
+        title="Error Loading Meetings"
+        description="Something went wrong while fetching meetings."
     />)
 }

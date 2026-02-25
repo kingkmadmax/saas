@@ -110,11 +110,11 @@ export const AgentForm = ({
               <FormControl>
                 <Textarea {...field} placeholder="i am good  at programings"  />
               </FormControl>
-              <FormMessage />
+          <FormMessage />
             </FormItem>
           )}
         />
-        <div  className="flex justify-between gap-x-2">
+        <div className="flex justify-between gap-x-2">
             {onCancel &&(
                 <Button 
                 variant={"ghost"}

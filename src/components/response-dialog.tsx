@@ -17,7 +17,7 @@ import {
   DrawerDescription,
 } from "@/components/ui/drawer";
 
-interface ResponsivDialogProps {
+interface ResponsiveDialogProps {
   title: string;
   description: string;
   children: React.ReactNode;
@@ -25,13 +25,13 @@ interface ResponsivDialogProps {
   onOpenChange: (open: boolean) => void;
 }
 
-export const ResponsivDialog = ({
+export const ResponsiveDialog = ({
   title,
   description,
   children,
   open,
   onOpenChange,
-}: ResponsivDialogProps) => {
+}: ResponsiveDialogProps) => {
   const isMobile = useIsMobile();
 
   if (isMobile) {
