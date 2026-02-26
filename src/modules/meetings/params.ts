@@ -2,7 +2,7 @@ import { createLoader, parseAsInteger, parseAsString, parseAsStringEnum } from "
 
 import { DEFAULT_PAGE } from "@/constants";
 
-import { MeetingStatus } from "@/modules/meetings/types";
+import { MeetingStatus } from "./types";
 
 export const filtersSearchParams = {
   search: parseAsString.withDefault("").withOptions({ clearOnDefault: true }),

@@ -6,7 +6,7 @@ import { ErrorState } from "@/components/error-state";
 
 import { DataTable } from "../componets/data-table";
 import { columns } from "../componets/columns";
-import { EmptyState } from "@/components/empty-state ";
+import { EmptyState } from "@/components/empty-state";
 import { useAgentsFilters } from "../../hooks/use-agent-filters";
 import { DataPagination } from "@/modules/agents/ui/componets/data-pagnt";
 import { useRouter } from "next/navigation";

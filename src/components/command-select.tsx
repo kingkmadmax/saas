@@ -40,6 +40,13 @@ export const CommandSelect = ({
 }: Props) => {
     const [open, setOpen] = useState(false);
     const selectedOption = options.find((options) => options.value === value);
+    
+    const handleOpenChange =(open:boolean)=>{
+        onSearch?.("");
+        setOpen(open);
+        
+    }
+        
 
     return (
         <>
@@ -60,7 +67,7 @@ export const CommandSelect = ({
 
                 open={open}
                 shouldFilter={!onSearch}
-                onOpenChange={setOpen}>
+                onOpenChange={handleOpenChange}>
                 <CommandInput
                     placeholder="Search..."
                     onValueChange={onSearch}
